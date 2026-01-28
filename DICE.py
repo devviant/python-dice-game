@@ -12,13 +12,12 @@ def calculate_score(d1, d2):
     # Snake eyes
     if d1 == 1 and d2 == 1:
         return 0, "snake"
-    # Doubles (not ones)
+    # Doubles
     if d1 == d2 and d1 != 1:
         return (d1 + d2) * 2, "double"
     # Normal roll
     return d1 + d2, "normal"
 
-# Startup Messages
 print("Hi there! Welcome to DICE")
 print("- To View The Rules, Press 'r'")
 print("- To play the game, Press 'p'")
@@ -104,7 +103,6 @@ while playing:
 
     print(f"\nTOTAL WINS — You: {player_total} | Computer: {computer_total}")
 
-    # Play again?
     again = input("\nPlay again? (y/n): ").lower()
     if again != "y":
         playing = False
